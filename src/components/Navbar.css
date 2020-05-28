@@ -1,0 +1,22 @@
+.active {
+  text-decoration: underline;
+}
+
+#Navbar {
+  background-color: #ae44bf;
+  display: flex;
+  width: 100%;
+}
+
+#Navbar > * {
+  padding: 0.5rem;
+}
+
+.NavLink {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.NavLink:not(.active) {
+  text-decoration: none;
+}
