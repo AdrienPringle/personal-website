@@ -1,0 +1,33 @@
+.Content {
+  width: 40rem;
+  margin: auto;
+  margin-top: calc(50vh - 8.3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+#text {
+  margin-top: calc(50vh - 2rem);
+  margin-bottom: 25%;
+}
+
+#frontPage {
+  margin: auto;
+  display: inline-block;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
+  text-align: center;
+}
+
+#introduction {
+  text-align: left;
+  font-size: 2rem;
+}
+#introduction > h1 {
+  font-size: 5rem;
+  line-height: 2rem;
+}
+
+#downButton {
+  margin: auto;
+  width: 5rem;
+}

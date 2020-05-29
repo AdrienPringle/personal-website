@@ -1,0 +1,13 @@
+#PageShade {
+  width: 50rem;
+  height: 100%;
+  left: calc(50% - 25rem);
+  background: linear-gradient(
+    180deg,
+    rgba(174, 68, 191, 0) 7%,
+    rgba(50, 39, 96, 0.58) 100%
+  );
+  z-index: -1;
+  position: fixed;
+  top: 100%;
+}

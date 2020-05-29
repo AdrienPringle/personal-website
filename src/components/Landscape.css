@@ -1,0 +1,11 @@
+.Landscape {
+  position: fixed;
+  left: 50%;
+  margin-left: -70rem;
+  bottom: 0;
+  margin-bottom: 0;
+
+  width: 140rem;
+
+  z-index: -2;
+}
