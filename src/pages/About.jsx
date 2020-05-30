@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./About.css";
+
+//import components
 import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
 
