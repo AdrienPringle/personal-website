@@ -8,4 +8,13 @@
   width: 140rem;
 
   z-index: -2;
+
+}
+
+.Landscape{
+  transition: margin-left 0.25s ease-in-out;
+}
+
+.tab3{
+  margin-left: -60rem;
 }
