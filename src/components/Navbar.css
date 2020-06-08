@@ -1,24 +1,64 @@
-.active {
-  text-decoration: underline;
-}
-
 #Navbar {
   background-color: #ae44bf;
-  display: flex;
-  width: 100%;
+  width: calc(100% - 2rem);
   position: fixed;
   top: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+
+  padding-top: 0.4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #Navbar > * {
-  padding: 0.5rem;
+  padding-bottom: 0;
+  
 }
 
-.NavLink {
-  color: #fff;
+.NavText {
+  padding: 1rem;
+  color: #f2d8f1;
   font-size: 1.5rem;
+  transition: all .2s;
+  text-decoration: none;
 }
 
-.NavLink:not(.active) {
+.NavText > div{
+  position: relative;
   text-decoration: none;
+  padding-bottom: 8px;
+}
+
+/* underline animation stolen from Matthew Scott*/
+.NavText > div::before{
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  bottom: 7px;
+  left: -5%;
+  background: #f2d8f1;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .1s ease-out;
+}
+
+.NavText:hover > div::before, .active > div::before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+.imgContainer{
+  padding-top: 0.8rem;
+  padding-left: 0.5rem;
+  height: 39px;
+  width: 2rem;
+}
+.imgContainer > svg{
+  width: 2rem;
+  height: 2rem;
 }

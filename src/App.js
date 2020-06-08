@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 //import react router and transition
-import { Route, NavLink, Redirect, BrowserRouter, Switch } from "react-router-dom";
+import { Route, Redirect, BrowserRouter, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 //import components
@@ -33,7 +33,7 @@ class App extends Component {
 
   handleExiting = (e) => {
     if (e != undefined) {
-      if (this.state.direction == "left") {
+      if (this.state.direction === "left") {
         e.classList.remove("right-exit-active")
         e.classList.remove("right-exit")
         e.classList.add("left-exit-active")
@@ -56,7 +56,7 @@ class App extends Component {
   handleScroll = () => {
     //find y pos
     let page = document.getElementsByClassName("Page")[0]
-    if (page != undefined) {
+    if (page !== undefined) {
       this.setState({ yPos: page.getBoundingClientRect().top })
     }
 
@@ -66,7 +66,7 @@ class App extends Component {
       this.setState({ backgroundColor: "#872a9d" });
 
     let html = document.getElementById("html");
-    if (html.style.backgroundColor != this.state.backgroundColor) {
+    if (html.style.backgroundColor !== this.state.backgroundColor) {
       html.style.backgroundColor = this.state.backgroundColor;
     }
   };
@@ -97,6 +97,7 @@ class App extends Component {
                   <Switch location={location}>
 
                     <Route path={["/", "/about"]} exact render={() => <div className="Page"  ><About /></div>} />
+                    <Route path="/resume" render={() => <div className="Page"> <div id="Resume" className="Content"> Resume{" "}</div> </div>} />
                     <Route path="/contact" render={() => <div className="Page"> <div id="Contact" className="Content"> Email, UW email, Phone, discord{" "}</div> </div>} />
                     <Redirect to="/" />
                   </Switch></CSSTransition></TransitionGroup>)} />
