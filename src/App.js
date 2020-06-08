@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 //import react router and transition
-import { Route, NavLink, BrowserRouter, Switch } from "react-router-dom";
+import { Route, NavLink, Redirect, BrowserRouter, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 //import components
@@ -96,12 +96,9 @@ class App extends Component {
                 >
                   <Switch location={location}>
 
-                    <Route path={["/", "/about"]} exact render={() => <div className="Page"  ><About /></div>}>
-
-                    </Route>
-                    <Route path="/contact" render={() => <div className="Page"> <div id="Contact" className="Content"> Email, UW email, Phone, discord{" "}</div> </div>}>
-
-                    </Route>
+                    <Route path={["/", "/about"]} exact render={() => <div className="Page"  ><About /></div>} />
+                    <Route path="/contact" render={() => <div className="Page"> <div id="Contact" className="Content"> Email, UW email, Phone, discord{" "}</div> </div>} />
+                    <Redirect to="/" />
                   </Switch></CSSTransition></TransitionGroup>)} />
           <Navbar handleClick={this.handleClick} />
         </BrowserRouter>
