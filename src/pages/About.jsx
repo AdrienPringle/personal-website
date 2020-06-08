@@ -6,6 +6,7 @@ import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
 
 class About extends Component {
+
   render() {
     return (
       <div id="About" className="Content">

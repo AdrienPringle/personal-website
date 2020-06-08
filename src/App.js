@@ -47,6 +47,11 @@ class App extends Component {
     }
   }
 
+  handleEntered = () => {
+    window.scrollTo(0, 0)
+  }
+
+
 
   handleScroll = () => {
     //find y pos
@@ -87,6 +92,7 @@ class App extends Component {
                   classNames={this.state.direction}
                   timeout={{ enter: 250, exit: 250 }}
                   onExiting={this.handleExiting}
+                  onEntered={this.handleEntered}
                 >
                   <Switch location={location}>
 
