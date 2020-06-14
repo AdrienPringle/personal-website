@@ -1,7 +1,7 @@
-.Content {
+#About {
   width: 40rem;
   margin: auto;
-  margin-top: calc(50vh - 8.3rem);
+  padding-top: calc(50vh - 8.3rem);
   display: flex;
   flex-direction: column;
 }

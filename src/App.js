@@ -3,7 +3,7 @@ import "./App.css";
 
 //import react router and transition
 import { Route, Redirect, BrowserRouter, Switch } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 //import components
 import Navbar from "./components/Navbar";
@@ -11,7 +11,7 @@ import Landscape from "./components/Landscape";
 
 //import pages
 import About from "./pages/About";
-
+import Resume from "./pages/Resume";
 
 class App extends Component {
   constructor() {
@@ -25,39 +25,37 @@ class App extends Component {
 
   handleClick = (tab) => {
     if (this.state.tab > tab) {
-      this.setState({ direction: "right", tab: tab })
+      this.setState({ direction: "right", tab: tab });
     } else {
-      this.setState({ direction: "left", tab: tab })
+      this.setState({ direction: "left", tab: tab });
     }
-  }
+  };
 
   handleExiting = (e) => {
     if (e != undefined) {
       if (this.state.direction === "left") {
-        e.classList.remove("right-exit-active")
-        e.classList.remove("right-exit")
-        e.classList.add("left-exit-active")
-        e.classList.add("left-exit")
+        e.classList.remove("right-exit-active");
+        e.classList.remove("right-exit");
+        e.classList.add("left-exit-active");
+        e.classList.add("left-exit");
       } else {
-        e.classList.remove("left-exit-active")
-        e.classList.remove("left-exit")
-        e.classList.add("right-exit-active")
-        e.classList.add("right-exit")
+        e.classList.remove("left-exit-active");
+        e.classList.remove("left-exit");
+        e.classList.add("right-exit-active");
+        e.classList.add("right-exit");
       }
     }
-  }
+  };
 
   handleEntered = () => {
-    window.scrollTo(0, 0)
-  }
-
-
+    window.scrollTo(0, 0);
+  };
 
   handleScroll = () => {
     //find y pos
-    let page = document.getElementsByClassName("Page")[0]
+    let page = document.getElementsByClassName("Page")[0];
     if (page !== undefined) {
-      this.setState({ yPos: page.getBoundingClientRect().top })
+      //this.setState({ yPos: page.getBoundingClientRect().top });
     }
 
     //set background
@@ -79,7 +77,6 @@ class App extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-
   render() {
     return (
       <div className="App">
@@ -95,12 +92,41 @@ class App extends Component {
                   onEntered={this.handleEntered}
                 >
                   <Switch location={location}>
-
-                    <Route path={["/", "/about"]} exact render={() => <div className="Page"  ><About /></div>} />
-                    <Route path="/resume" render={() => <div className="Page"> <div id="Resume" className="Content"> Resume{" "}</div> </div>} />
-                    <Route path="/contact" render={() => <div className="Page"> <div id="Contact" className="Content"> Email, UW email, Phone, discord{" "}</div> </div>} />
+                    <Route
+                      path={["/", "/about"]}
+                      exact
+                      render={() => (
+                        <div id="p1" className="Page">
+                          <About />
+                        </div>
+                      )}
+                    />
+                    <Route
+                      path="/resume"
+                      render={() => (
+                        <div id="p2" className="Page">
+                          <Resume />
+                        </div>
+                      )}
+                    />
+                    <Route
+                      path="/contact"
+                      render={() => (
+                        <div id="p3" className="Page">
+                          {" "}
+                          <div id="Contact" className="Content">
+                            {" "}
+                            Email, UW email, Phone, discord{" "}
+                          </div>{" "}
+                        </div>
+                      )}
+                    />
                     <Redirect to="/" />
-                  </Switch></CSSTransition></TransitionGroup>)} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
           <Navbar handleClick={this.handleClick} />
         </BrowserRouter>
         <Landscape tab={this.state.tab} />

@@ -6,11 +6,10 @@ import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
 
 class About extends Component {
-
   render() {
     return (
       <div id="About" className="Content">
-        <PageShade />
+        <PageShade isScroll={true} />
         <div id="frontPage">
           <div id="introduction">
             Hi i'm <h1>Adrien Pringle</h1>

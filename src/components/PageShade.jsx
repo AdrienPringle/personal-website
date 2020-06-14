@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import "./PageShade.css";
 
 class PageShade extends Component {
-  state = { height: window.innerHeight };
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: props.isScroll ? window.innerHeight : 0,
+    };
+  }
 
   fixShade = () => {
     let height = window.innerHeight - 2 * window.pageYOffset;
@@ -11,18 +16,22 @@ class PageShade extends Component {
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.fixShade);
+    if (this.props.isScroll) {
+      window.addEventListener("scroll", this.fixShade);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.fixShade);
+    if (this.props.isScroll) {
+      window.removeEventListener("scroll", this.fixShade);
+    }
   }
   render() {
     /*let position =
       this.state.yOffset / window.innerHeight >= 1 ? "fixed" : "absolute";
     return <div id="PageShade" className={position}></div>;*/
 
-    return <div id="PageShade" style={{ top: this.state.height }}></div>;
+    return <div className="PageShade" style={{ top: this.state.height }}></div>;
   }
 }
 

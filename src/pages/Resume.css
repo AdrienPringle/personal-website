@@ -1,0 +1,12 @@
+#Resume {
+  width: 45rem;
+  margin: auto;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#text {
+  margin-top: calc(50vh - 2rem);
+  margin-bottom: 25%;
+}
