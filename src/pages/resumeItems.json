@@ -1,0 +1,39 @@
+{
+  "experiences": [
+    {
+      "title": "Database Developer",
+      "organization": "Bike Energy Lab",
+      "dates": ["March 2020", "May 2020"],
+      "location": "Hong Kong",
+      "points": [
+        "Designed the architecture for a MySQL database to store anthropometric data of customers",
+        "Wrote Python scripts to automate the migration of data for over 500 customers from Excel files",
+        "Applied statistical methods to analyse population data and improve customer-product matching",
+        "Created a user-friendly web app to interface with the database through an API built using Node.js, and tested using Postman"
+      ],
+      "important": true
+    },
+    {
+      "title": "Educational Assistant",
+      "organization": "Canadian International School of Hong Kong",
+      "dates": ["January 2020"],
+      "location": "Hong Kong",
+      "points": [
+        "Supervised and ensured the safety of children aged 5 to 12 so that classes ran smoothly",
+        "Acted as a role model and assisted children with individual needs to create a supportive and fun environment"
+      ],
+      "important": false
+    },
+    {
+      "title": "Game Development Club President",
+      "dates": ["September 2017", "August 2019"],
+      "location": "Hong Kong",
+      "points": [
+        "Took initiative to found and run the club out of a passion for playing and designing video games, successfully acting as president for 2 years and ensuring its longevity after my graduation",
+        "Displayed management and collaboration skills as lead developer of a 12 member team to complete avideo game inspired by chess",
+        "Developed competency in web development (JS/HTML/CSS), version control (Github), and game design"
+      ],
+      "important": true
+    }
+  ]
+}
