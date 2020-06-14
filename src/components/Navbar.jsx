@@ -34,7 +34,6 @@ class Navbar extends Component {
         </NavLink>
         <a
           href="https://github.com/AdrienPringle"
-          target="_blank"
           rel="noopener"
           className="imgContainer"
         >
@@ -42,7 +41,6 @@ class Navbar extends Component {
         </a>
         <a
           href="https://www.linkedin.com/in/adrienpringle/"
-          target="_blank"
           rel="noopener"
           className="imgContainer"
         >
