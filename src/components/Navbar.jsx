@@ -35,6 +35,7 @@ class Navbar extends Component {
         <a
           href="https://github.com/AdrienPringle"
           target="_blank"
+          rel="noopener"
           className="imgContainer"
         >
           <GithubIcon fill="#f2d8f1" />
@@ -42,6 +43,7 @@ class Navbar extends Component {
         <a
           href="https://www.linkedin.com/in/adrienpringle/"
           target="_blank"
+          rel="noopener"
           className="imgContainer"
         >
           <LinkedInIcon fill="#f2d8f1" />

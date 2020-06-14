@@ -5,8 +5,41 @@
   display: flex;
   flex-direction: column;
 }
+#resumeHead {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#resumeOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+#resumeOptions > * {
+  margin: 0.25rem;
+}
+#resumeName {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
+}
+#resumeSub {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#resumeSub > * {
+  margin: 0.1rem;
+}
 
 #text {
   margin-top: calc(50vh - 2rem);
   margin-bottom: 25%;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
