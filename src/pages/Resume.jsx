@@ -10,12 +10,39 @@ import resumeItems from "./resumeItems.json";
 import { ReactComponent as PDFIcon } from "./document.svg";
 
 class Resume extends Component {
-  getResumeTiles(condensed) {
-    let items = resumeItems.experiences;
-    if (condensed) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isCondensed: true,
+    };
+  }
+
+  getResumeSkills(isCondensed) {
+    let skills = { ...resumeItems.skills }; //copy instead of reference
+
+    //filter skills that aren't important
+    if (isCondensed) {
+      for (let skill in skills) {
+        skills[skill] = skills[skill].filter((i) => i.important);
+        if (skills[skill].length == 0) delete skills[skill];
+      }
+    }
+
+    return (
+      <ResumeTile
+        title={(isCondensed ? "Condensed " : "") + "Skills Summary"}
+        skills={skills}
+      />
+    );
+  }
+
+  getResumeExperiences(isCondensed) {
+    let items = [...resumeItems.experiences]; //copy instead of reference
+
+    //filter experiences that aren't important
+    if (isCondensed) {
       items = items.filter((i) => i.important);
     }
-    console.log(items);
     return items.map((i) => (
       <ResumeTile
         key={i.title}
@@ -26,6 +53,10 @@ class Resume extends Component {
       />
     ));
   }
+
+  handleSwitchOnClick = () => {
+    this.setState({ isCondensed: !this.state.isCondensed });
+  };
 
   render() {
     return (
@@ -41,14 +72,24 @@ class Resume extends Component {
             </div>
           </div>
           <div id="resumeOptions">
-            <Switch text="Show Condensed" />
-            <button id="openPDFButton" type="button">
+            <Switch
+              text="Show Condensed"
+              handleClick={this.handleSwitchOnClick}
+            />
+            <a
+              href="/Adrien_Pringle_Resume_2020.pdf"
+              target="_blank"
+              id="openPDFButton"
+            >
               <PDFIcon />
               <span>Open PDF</span>
-            </button>
+            </a>
           </div>
         </div>
-        <div id="tilesContainer">{this.getResumeTiles(false)}</div>
+        {this.getResumeSkills(this.state.isCondensed)}
+        <div id="tilesContainer">
+          {this.getResumeExperiences(this.state.isCondensed)}
+        </div>
       </div>
     );
   }

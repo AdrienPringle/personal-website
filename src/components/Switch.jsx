@@ -6,7 +6,11 @@ class Resume extends Component {
     return (
       <div className="switch">
         <label className="slider">
-          <input type="checkbox" name="showCondensed"></input>
+          <input
+            name="showCondensed"
+            type="checkbox"
+            onClick={this.props.handleClick}
+          ></input>
           <span className="slider"></span>
           <div className="slider-label">{this.props.text}</div>
         </label>

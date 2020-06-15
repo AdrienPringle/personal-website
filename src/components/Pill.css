@@ -1,0 +1,17 @@
+.inner-pill {
+  border: 1px solid #f2d8f1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+.inner-pill:not(:last-child) {
+  padding-right: 1.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: none;
+}
+
+.inner-pill:not(:first-child) {
+  margin-left: -1rem;
+}

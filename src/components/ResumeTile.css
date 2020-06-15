@@ -37,3 +37,29 @@
 #tile-points {
   padding-inline-start: 2rem;
 }
+
+.skill-set {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 0.3rem;
+  margin-right: 1rem;
+}
+.Pill {
+  margin: 0.3rem;
+}
+
+.skill-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: auto;
+}
+
+.tile-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -38,8 +38,16 @@
   margin-top: calc(50vh - 2rem);
   margin-bottom: 25%;
 }
-button {
+#openPDFButton {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: black;
+  background-color: #eee;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+#openPDFButton:hover:not(:active) {
+  background-color: #ddd;
 }
