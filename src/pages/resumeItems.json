@@ -35,5 +35,35 @@
       ],
       "important": true
     }
-  ]
+  ],
+  "skills": {
+    "Programming Languages": [
+      { "names": ["Python"], "important": true },
+      { "names": ["Java"], "important": true },
+      { "names": ["Javascript"], "important": true },
+      { "names": ["Swift"], "important": false },
+      { "names": ["Arduino"], "important": false },
+      { "names": ["C++"], "important": false }
+    ],
+    "Databases": [
+      { "names": ["MySQL"], "important": true },
+      { "names": ["Firestore"], "important": true }
+    ],
+    "Web Development": [
+      { "names": ["React"], "important": true },
+      { "names": ["Node.js", "npm"], "important": true },
+      { "names": ["JS", "HTML", "CSS"], "important": true },
+      { "names": ["Firebase"], "important": true },
+      { "names": ["Postman"], "important": false }
+    ],
+    "Fluent Languages": [
+      { "names": ["English"], "important": false },
+      { "names": ["Français"], "important": false }
+    ],
+    "Graphic Design": [
+      { "names": ["Photoshop", "Illustrator"], "important": false },
+      { "names": ["Inkscape"], "important": false },
+      { "names": ["Gimp"], "important": false }
+    ]
+  }
 }
