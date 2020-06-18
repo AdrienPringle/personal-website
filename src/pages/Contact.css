@@ -1,0 +1,7 @@
+#Contact {
+  width: 40rem;
+  margin: auto;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}

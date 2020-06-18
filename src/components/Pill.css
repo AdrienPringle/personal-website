@@ -15,3 +15,7 @@
 .inner-pill:not(:first-child) {
   margin-left: -1rem;
 }
+
+.Pill {
+  display: inline-block;
+}

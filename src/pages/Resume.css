@@ -20,11 +20,7 @@
 #resumeOptions > * {
   margin: 0.25rem;
 }
-#resumeName {
-  font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
-}
+
 #resumeSub {
   display: flex;
   flex-direction: row;

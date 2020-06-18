@@ -29,6 +29,16 @@ html {
   background-color: #872a9d;
   height: 100%;
 }
+h1 {
+  font-size: 5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
+}
+
+h2 {
+  font-size: 4rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
+  margin: 0;
+}
 
 h4 {
   color: #b0e3a8;

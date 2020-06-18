@@ -12,6 +12,7 @@ import Landscape from "./components/Landscape";
 //import pages
 import About from "./pages/About";
 import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
 
 class App extends Component {
   constructor() {
@@ -113,11 +114,7 @@ class App extends Component {
                       path="/contact"
                       render={() => (
                         <div id="p3" className="Page">
-                          {" "}
-                          <div id="Contact" className="Content">
-                            {" "}
-                            Email, UW email, Phone, discord{" "}
-                          </div>{" "}
+                          <Contact />
                         </div>
                       )}
                     />

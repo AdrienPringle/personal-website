@@ -64,7 +64,7 @@ class Resume extends Component {
         <PageShade />
         <div id="resumeHead">
           <div id="resumeTitle">
-            <div id="resumeName">Adrien Pringle</div>
+            <h2 id="resumeName">Adrien Pringle</h2>
             <div id="resumeSub">
               <div>BEng. in Compunter Engineering</div>
               <div id="seperator"> | </div>
