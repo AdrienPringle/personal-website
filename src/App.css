@@ -9,7 +9,7 @@
 }
 
 body {
-  font-size: 1em;
+  font-size: 1.25em;
   color: #f2d8f1;
   font-family: "Roboto", sans-serif;
   overflow: auto;
@@ -46,7 +46,7 @@ h3 {
 }
 
 h4 {
-  color: #b0e3a8;
+  color: #ffde85;
   font-weight: normal;
 }
 

@@ -48,7 +48,7 @@ class About extends Component {
               very much xoxo
             </b>
           </p>
-          <h4>//About Me</h4>
+          <h4>About Me</h4>
           <p>
             {" "}
             I like making things, so I've worked on many diverse projects in the
@@ -69,7 +69,7 @@ class About extends Component {
             me for the <b>spring 2021</b> academic term
           </p>
           <img src={img1}></img>
-          <h4>//Origin Story</h4>
+          <h4>Origin Story</h4>
           <p>
             {" "}
             I used to like playing games. Then I was introduced to scratch in
