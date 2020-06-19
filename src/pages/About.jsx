@@ -24,11 +24,17 @@ class About extends Component {
     this.props.setVisible(rect.top >= -195);
   };
 
+  handleFrontPageClick() {
+    document.getElementById("text").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   render() {
     return (
       <div id="About" className="Content">
         <PageShade isScroll={true} />
-        <div id="frontPage">
+        <div id="frontPage" onClick={this.handleFrontPageClick}>
           <div id="introduction">
             Hi i'm <h1>Adrien Pringle</h1>
           </div>
