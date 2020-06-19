@@ -6,6 +6,21 @@ import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
 
 class About extends Component {
+  componentDidMount() {
+    this.props.setVisible(true);
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    this.props.setVisible(false);
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    let rect = document.getElementById("frontPage").getBoundingClientRect();
+    this.props.setVisible(rect.top >= -195);
+  };
+
   render() {
     return (
       <div id="About" className="Content">

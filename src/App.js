@@ -21,6 +21,7 @@ class App extends Component {
       backgroundColor: "#872a9d",
       tab: 0,
       direction: "left",
+      frontPageIsVisible: false,
     };
   }
 
@@ -70,6 +71,10 @@ class App extends Component {
     }
   };
 
+  setFrontPageIsVisible = (isVisible) => {
+    this.setState({ frontPageIsVisible: isVisible });
+  };
+
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -98,7 +103,7 @@ class App extends Component {
                       exact
                       render={() => (
                         <div id="p1" className="Page">
-                          <About />
+                          <About setVisible={this.setFrontPageIsVisible} />
                         </div>
                       )}
                     />
@@ -124,7 +129,10 @@ class App extends Component {
               </TransitionGroup>
             )}
           />
-          <Navbar handleClick={this.handleClick} />
+          <Navbar
+            handleClick={this.handleClick}
+            frontPageIsVisible={this.state.frontPageIsVisible}
+          />
         </BrowserRouter>
         <Landscape tab={this.state.tab} />
       </div>

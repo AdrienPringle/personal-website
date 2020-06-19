@@ -8,33 +8,31 @@
   justify-content: flex-end;
   align-items: center;
 
-
   padding-top: 0.4rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #Navbar > * {
   padding-bottom: 0;
-  
 }
 
 .NavText {
   padding: 1rem;
   color: #f2d8f1;
   font-size: 1.5rem;
-  transition: all .2s;
+  transition: all 0.2s;
   text-decoration: none;
 }
 
-.NavText > div{
+.NavText > div {
   position: relative;
   text-decoration: none;
   padding-bottom: 8px;
 }
 
 /* underline animation stolen from Matthew Scott*/
-.NavText > div::before{
+.NavText > div::before {
   content: "";
   position: absolute;
   width: 110%;
@@ -45,20 +43,42 @@
   visibility: hidden;
   border-radius: 5px;
   transform: scaleX(0);
-  transition: .1s ease-out;
+  transition: 0.1s ease-out;
 }
 
-.NavText:hover > div::before, .active > div::before{
+.NavText:hover > div::before,
+.active > div::before {
   visibility: visible;
   transform: scaleX(1);
 }
-.imgContainer{
+.imgContainer {
   padding-top: 0.8rem;
   padding-left: 0.5rem;
   height: 39px;
   width: 2rem;
 }
-.imgContainer > svg{
+
+.imgContainer > svg {
   width: 2rem;
   height: 2rem;
+}
+
+#brand {
+  margin-right: auto;
+  font-size: 1.5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 23%);
+
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.navbar-name {
+  font-size: 2rem;
+}
+
+.UpButton {
+  margin-left: 0.5rem;
+  transform: scaleY(-1);
 }

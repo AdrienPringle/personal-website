@@ -3,13 +3,30 @@ import { NavLink } from "react-router-dom";
 
 import { ReactComponent as GithubIcon } from "./github.svg";
 import { ReactComponent as LinkedInIcon } from "./linkedin.svg";
+import { ReactComponent as UpButton } from "../pages/down-button.svg";
 
 import "./Navbar.css";
 
 class Navbar extends Component {
+  nameShouldDisplay() {
+    if (this.props.frontPageIsVisible) return { display: "none" };
+    return {};
+  }
   render() {
     return (
       <div id="Navbar">
+        <NavLink
+          id="brand"
+          to="/"
+          onClick={() => this.props.handleClick(0)}
+          style={this.nameShouldDisplay()}
+        >
+          <span>
+            Hi I'm
+            <b className="navbar-name"> Adrien Pringle </b>{" "}
+          </span>
+          <UpButton className="UpButton" />
+        </NavLink>
         <NavLink
           to="/About"
           exact
