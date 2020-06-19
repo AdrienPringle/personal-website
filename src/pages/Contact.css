@@ -1,7 +1,7 @@
 #Contact {
   width: 40rem;
   margin: auto;
-  padding-top: 10rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
 }
