@@ -23,7 +23,7 @@ class Resume extends Component {
     //filter skills that aren't important
     if (isCondensed) {
       for (let skill in skills) {
-        skills[skill] = skills[skill].filter((i) => i.important);
+        skills[skill] = skills[skill].filter((i) => i.isImportant);
         if (skills[skill].length == 0) delete skills[skill];
       }
     }
@@ -41,7 +41,7 @@ class Resume extends Component {
 
     //filter experiences that aren't important
     if (isCondensed) {
-      items = items.filter((i) => i.important);
+      items = items.filter((i) => i.isImportant);
     }
     return items.map((i) => (
       <ResumeTile

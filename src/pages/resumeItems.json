@@ -11,7 +11,7 @@
         "Applied statistical methods to analyse population data and improve customer-product matching",
         "Created a user-friendly web app to interface with the database through an API built using Node.js, and tested using Postman"
       ],
-      "important": true
+      "isImportant": true
     },
     {
       "title": "Educational Assistant",
@@ -22,7 +22,7 @@
         "Supervised and ensured the safety of children aged 5 to 12 so that classes ran smoothly",
         "Acted as a role model and assisted children with individual needs to create a supportive and fun environment"
       ],
-      "important": false
+      "isImportant": false
     },
     {
       "title": "Game Development Club President",
@@ -33,37 +33,75 @@
         "Displayed management and collaboration skills as lead developer of a 12 member team to complete avideo game inspired by chess",
         "Developed competency in web development (JS/HTML/CSS), version control (Github), and game design"
       ],
-      "important": true
+      "isImportant": true
+    },
+    {
+      "title": "Lilypad Reading Programme Contributor and Mentor",
+      "organization": "Canadian International School of Hong Kong",
+      "dates": ["December 2016", "August 2019"],
+      "location": "Hong Kong",
+      "points": [
+        "Planned lessons and created materials for weekly Grade 1 reading sessions to create a fun programme that enriched students’ English language comprehension and speaking ability",
+        "Had a direct positive impact on several students’ reading proficiency as a volunteer mentor"
+      ],
+      "isImportant": false
+    },
+    {
+      "title": "Trashmaran",
+      "organization": "MakerBay",
+      "dates": ["November 2018"],
+      "location": "Hong Kong",
+      "points": [
+        "Demonstrated effective teamwork and organisational skills by completing a succeeful prototype under a stressful 3 day timeline",
+        "Safely operated machinery including circular saws, bandsaws, and a drill press, and gained experience soldering"
+      ],
+      "link": "https://www.instructables.com/id/Trashmaran/",
+      "isImportant": false
+    },
+    {
+      "title": "Warp Duels",
+      "organization": "",
+      "dates": ["October 2016", "Febuary 2017"],
+      "location": "Hong Kong",
+      "points": [
+        "Self taught Swift, and improved on UI/graphic design skills to create a polished user experience."
+      ],
+      "link": "https://github.com/AdrienPringle/Warp-Duels",
+      "isImportant": false
     }
   ],
   "skills": {
     "Programming Languages": [
-      { "names": ["Python"], "important": true },
-      { "names": ["Java"], "important": true },
-      { "names": ["Javascript"], "important": true },
-      { "names": ["Swift"], "important": false },
-      { "names": ["Arduino"], "important": false },
-      { "names": ["C++"], "important": false }
+      { "names": ["Python"], "isImportant": true },
+      { "names": ["Java"], "isImportant": true },
+      { "names": ["Javascript"], "isImportant": true },
+      { "names": ["Swift"], "isImportant": false },
+      { "names": ["Arduino"], "isImportant": false },
+      { "names": ["C++"], "isImportant": false }
     ],
     "Databases": [
-      { "names": ["MySQL"], "important": true },
-      { "names": ["Firestore"], "important": true }
-    ],
-    "Web Development": [
-      { "names": ["React"], "important": true },
-      { "names": ["Node.js", "npm"], "important": true },
-      { "names": ["JS", "HTML", "CSS"], "important": true },
-      { "names": ["Firebase"], "important": true },
-      { "names": ["Postman"], "important": false }
+      { "names": ["MySQL"], "isImportant": true },
+      { "names": ["Firestore"], "isImportant": true }
     ],
     "Fluent Languages": [
-      { "names": ["English"], "important": false },
-      { "names": ["Français"], "important": false }
+      { "names": ["English"], "isImportant": false },
+      { "names": ["Français"], "isImportant": false }
+    ],
+    "Web Development": [
+      { "names": ["React"], "isImportant": true },
+      { "names": ["Node.js", "npm"], "isImportant": true },
+      { "names": ["JS", "HTML", "CSS"], "isImportant": true },
+      { "names": ["Firebase"], "isImportant": true },
+      { "names": ["Postman"], "isImportant": false }
     ],
     "Graphic Design": [
-      { "names": ["Photoshop", "Illustrator"], "important": false },
-      { "names": ["Inkscape"], "important": false },
-      { "names": ["Gimp"], "important": false }
+      { "names": ["Photoshop", "Illustrator"], "isImportant": false },
+      { "names": ["Inkscape"], "isImportant": false },
+      { "names": ["Gimp"], "isImportant": false }
+    ],
+    "Version Control": [
+      { "names": ["Git"], "isImportant": false },
+      { "names": ["Github"], "isImportant": false }
     ]
   }
 }
