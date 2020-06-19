@@ -5,6 +5,9 @@ import "./About.css";
 import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
 
+//import images
+import img1 from "./me.png";
+
 class About extends Component {
   componentDidMount() {
     this.props.setVisible(true);
@@ -32,8 +35,14 @@ class About extends Component {
           <img id="downButton" alt="go down" src={downButton}></img>
         </div>
         <div id="text">
-          <h4>//Useful Links</h4>
-          Github, Linkedin
+          <p>
+            {" "}
+            <b>
+              All of this is tentative pls dont hate me too hard yet thank u
+              very much xoxo
+            </b>
+          </p>
+          <h4>//About Me</h4>
           <p>
             {" "}
             I like making things, so I've worked on many diverse projects in the
@@ -51,8 +60,9 @@ class About extends Component {
             {" "}
             I'm currently working towards my B.Eng in computer engineering at
             the University of Waterloo. I'm in the coop program so please hire
-            me for the term of <b>fall 2020</b>
+            me for the <b>spring 2021</b> academic term
           </p>
+          <img src={img1}></img>
           <h4>//Origin Story</h4>
           <p>
             {" "}
@@ -61,20 +71,14 @@ class About extends Component {
             games in Scratch religiously for years, which gradually turned into
             seperate interests in math, programming, ui design, and game design
           </p>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          view my embarassing grade 5 scratch games
+          <a href="http://"> view my embarassing grade 5 scratch games </a>
           <h4> Come play games with me</h4>
-          Discord, Steam, Epic, Battlenet, Riot
+          <a href="http://">Discord</a> <a href="http://">Steam</a>{" "}
+          <a href="http://">Epic</a> <a href="http://">Battlenet</a>{" "}
+          <a href="http://">Riot</a>
+          <div style={{ height: "100rem" }}></div>
           <p>I'm also a closet weeb. shh...</p>
-          MAL
+          <a href="http://">MAL</a>
         </div>
       </div>
     );
