@@ -40,6 +40,11 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
 h4 {
   color: #b0e3a8;
   font-weight: normal;

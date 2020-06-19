@@ -87,6 +87,10 @@ class Resume extends Component {
           </div>
         </div>
         {this.getResumeSkills(this.state.isCondensed)}
+        <div id="experienceSeperator">
+          <h3 id="seperatorText"> Experience </h3>
+          <hr id="seperatorEnd"></hr>
+        </div>
         <div id="tilesContainer">
           {this.getResumeExperiences(this.state.isCondensed)}
         </div>
