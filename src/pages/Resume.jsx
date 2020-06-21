@@ -50,6 +50,7 @@ class Resume extends Component {
         location={i.location}
         dates={i.dates}
         points={i.points}
+        skills={i.skills}
       />
     ));
   }

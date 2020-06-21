@@ -11,6 +11,7 @@
         "Applied statistical methods to analyse population data and improve customer-product matching",
         "Created a user-friendly web app to interface with the database through an API built using Node.js, and tested using Postman"
       ],
+      "skills": ["Python", "MySQL", "Node.js"],
       "isImportant": true
     },
     {
@@ -33,6 +34,7 @@
         "Displayed management and collaboration skills as lead developer of a 12 member team to complete avideo game inspired by chess",
         "Developed competency in web development (JS/HTML/CSS), version control (Github), and game design"
       ],
+      "skills": ["Github", ["JS", "HTML", "CSS"]],
       "isImportant": true
     },
     {
@@ -56,6 +58,7 @@
         "Safely operated machinery including circular saws, bandsaws, and a drill press, and gained experience soldering"
       ],
       "link": "https://www.instructables.com/id/Trashmaran/",
+      "skills": ["Machining", "Soldering"],
       "isImportant": false
     },
     {
@@ -67,6 +70,7 @@
         "Self taught Swift, and improved on UI/graphic design skills to create a polished user experience."
       ],
       "link": "https://github.com/AdrienPringle/Warp-Duels",
+      "skills": ["Swift"],
       "isImportant": false
     }
   ],

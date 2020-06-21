@@ -23,7 +23,7 @@
   font-size: 1.25em;
 }
 .tile-content {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .tile-data {
@@ -32,10 +32,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   font-weight: 300;
-}
-
-#tile-points {
-  padding-inline-start: 2rem;
 }
 
 .skill-set {
@@ -62,4 +58,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.tile-points {
+  padding-left: 1rem;
+}
+.tile-points > li {
+  margin-bottom: 0.5rem;
 }

@@ -10,17 +10,29 @@ class ResumeTile extends Component {
   getContent() {
     if (this.props.points) {
       return (
-        <ul className="tile-points">
-          {this.props.points.map((p, index) => (
-            <li key={index}>{p}</li>
-          ))}
-        </ul>
+        <React.Fragment>
+          <div className="tile-experience-skills">
+            {this.getExperienceSkills()}
+          </div>
+          <ul className="tile-points">
+            {this.props.points.map((p, index) => (
+              <li key={index}>{p}</li>
+            ))}
+          </ul>
+        </React.Fragment>
       );
     }
+
     if (this.props.skills) {
       return (
         <div className="tile-skills">{this.getSkillSet(this.props.skills)}</div>
       );
+    }
+  }
+
+  getExperienceSkills() {
+    if (this.props.skills) {
+      return this.props.skills.map((n) => <Pill key={n} name={n} />);
     }
   }
 
