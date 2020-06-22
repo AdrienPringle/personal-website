@@ -70,7 +70,7 @@
         "Self taught Swift, and improved on UI/graphic design skills to create a polished user experience."
       ],
       "link": "https://github.com/AdrienPringle/Warp-Duels",
-      "skills": ["Swift"],
+      "skills": [["Swift", "Xcode"], "Inkscape"],
       "isImportant": false
     }
   ],
