@@ -13,6 +13,7 @@ import Landscape from "./components/Landscape";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import CopyDoc from "./pages/CopyDoc";
 
 class App extends Component {
   constructor() {
@@ -61,10 +62,12 @@ class App extends Component {
     }
 
     //set background
-    if (window.pageYOffset <= 0) this.setState({ backgroundColor: "#AE44BF" });
-    if (window.pageYOffset >= document.body.offsetHeight)
-      this.setState({ backgroundColor: "#872a9d" });
-
+    if (window.location.pathname != "/copydoc") {
+      if (window.pageYOffset <= 0)
+        this.setState({ backgroundColor: "#AE44BF" });
+      if (window.pageYOffset >= document.body.offsetHeight)
+        this.setState({ backgroundColor: "#872a9d" });
+    }
     let html = document.getElementById("html");
     if (html.style.backgroundColor !== this.state.backgroundColor) {
       html.style.backgroundColor = this.state.backgroundColor;
@@ -123,18 +126,33 @@ class App extends Component {
                         </div>
                       )}
                     />
+                    <Route
+                      path="/copydoc"
+                      render={() => (
+                        <div id="copy" className="Page">
+                          <CopyDoc />
+                        </div>
+                      )}
+                    />
                     <Redirect to="/" />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
             )}
           />
-          <Navbar
-            handleClick={this.handleClick}
-            frontPageIsVisible={this.state.frontPageIsVisible}
-          />
+          {window.location.pathname == "/copydoc" ? (
+            <div id="plain-backdrop" className="backdrop"></div>
+          ) : (
+            <React.Fragment>
+              <Navbar
+                handleClick={this.handleClick}
+                frontPageIsVisible={this.state.frontPageIsVisible}
+              />
+              <Landscape tab={this.state.tab} />
+              <div id="color-backdrop" className="backdrop"></div>
+            </React.Fragment>
+          )}
         </BrowserRouter>
-        <Landscape tab={this.state.tab} />
       </div>
     );
   }

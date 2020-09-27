@@ -1,0 +1,106 @@
+/* body {
+  background: #20262e;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+} */
+
+.key-input {
+  background-color: #aaa;
+  color: #eee;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 4px;
+  padding-left: 10px;
+  margin: 5px;
+  width: 1200px;
+}
+.key-input:focus {
+  background-color: #eee;
+  color: black;
+}
+
+.line-container,
+.val-input {
+  font-size: 24px;
+  font-family: "Cousine", monospace;
+}
+
+.line-container {
+  color: black;
+  margin: 5px;
+  margin-bottom: 0px;
+}
+
+.item-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.CopyItem {
+  display: inline-flex;
+  align-items: center;
+
+  width: auto;
+
+  margin-top: 20px;
+  box-shadow: 0 0 2px 2px #eee;
+}
+
+.CopyDoc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.command-container {
+}
+
+.line-container {
+  width: auto;
+}
+
+.remove-button {
+  margin: 5px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+
+  /*   background-color: #f0959e;
+border: 2px solid #803d76; */
+}
+
+.copy-button {
+  margin: 5px;
+  width: 62px;
+  height: 62px;
+  display: inline-block;
+
+  /*  background-color: #b391fa; */
+}
+
+.val-input {
+  min-width: 2ch;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  font-style: italic;
+}
+
+.add-button {
+  margin: 5px;
+  margin-top: 15px;
+  font-size: 42px;
+
+  width: 55px;
+  height: 55px;
+}
