@@ -19,7 +19,8 @@
   padding: 4px;
   padding-left: 10px;
   margin: 5px;
-  width: 1200px;
+  /* width: 1200px; */
+  width: calc(100% - 5px);
 }
 .key-input:focus {
   background-color: #eee;
@@ -41,16 +42,19 @@
 .item-container {
   display: inline-flex;
   flex-direction: column;
+
+  width: 1200px;
+  max-width: 90vw;
 }
 
 .CopyItem {
   display: inline-flex;
   align-items: center;
 
-  width: auto;
-
   margin-top: 20px;
   box-shadow: 0 0 2px 2px #eee;
+
+  width: 100%;
 }
 
 .CopyDoc {
@@ -60,6 +64,7 @@
 }
 
 .command-container {
+  flex-grow: 1;
 }
 
 .line-container {
@@ -67,14 +72,28 @@
 }
 
 .remove-button {
-  margin: 5px;
-  border-radius: 20px;
-  width: 40px;
-  height: 40px;
-  margin: 10px;
+  align-self: flex-start;
 
-  /*   background-color: #f0959e;
-border: 2px solid #803d76; */
+  color: #aeaeae;
+
+  background: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 31px;
+
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 2.5px;
+}
+.remove-button:before {
+  content: "×";
+}
+.remove-button:hover {
+  box-shadow: inset 0px 0px 5px -3px #000000;
+}
+.remove-button:focus {
+  outline: 0;
 }
 
 .copy-button {
@@ -84,6 +103,17 @@ border: 2px solid #803d76; */
   display: inline-block;
 
   /*  background-color: #b391fa; */
+}
+
+.add-button {
+  margin: 5px;
+  margin-top: 15px;
+  font-size: 42px;
+
+  width: 62px;
+  height: 62px;
+
+  display: inline-block;
 }
 
 .val-input {
@@ -96,11 +126,7 @@ border: 2px solid #803d76; */
   font-style: italic;
 }
 
-.add-button {
-  margin: 5px;
-  margin-top: 15px;
-  font-size: 42px;
-
-  width: 55px;
-  height: 55px;
+.copy-helper {
+  color: black;
+  display: inline-block;
 }

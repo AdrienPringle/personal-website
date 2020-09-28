@@ -17,7 +17,7 @@ class CopyDoc extends React.Component {
     let newCopyItem = (
       <CopyItem
         delete={this.deleteCallback(itemCount)}
-        defaultKey="git checkout|branch_name"
+        defaultKey="git checkout |branch_name"
       />
     );
     let newItem = this.state.items;
@@ -52,6 +52,15 @@ class CopyDoc extends React.Component {
     }
   }
 
+  getActiveItems() {
+    if (!this.state.items) return 0;
+    let count = 0;
+    for (let a in this.state.items) {
+      if (this.state.items[a]) count++;
+    }
+    return count;
+  }
+
   render() {
     return (
       <div className="CopyDoc">
@@ -60,9 +69,16 @@ class CopyDoc extends React.Component {
             {Object.values(this.state.items).map((val, index) =>
               val ? <React.Fragment key={index}>{val}</React.Fragment> : ""
             )}
-            <button className="add-button" onClick={this.handleAddCopyItem}>
-              +
-            </button>
+            <div id="add-container">
+              <button className="add-button" onClick={this.handleAddCopyItem}>
+                +
+              </button>
+              {!this.getActiveItems() && (
+                <div className="copy-helper">
+                  ← click to add a new copy item
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -123,11 +139,10 @@ class CopyItem extends React.Component {
   render() {
     return (
       <div className="CopyItem">
-        <button className="remove-button" onClick={this.props.delete}>
-          -
+        <button className="copy-button" onClick={this.handleCopy}>
+          copy
         </button>
-
-        <div className="command-contianer">
+        <div className="command-container">
           <div className="line-container" ref={this.lineRef}>
             {this.getLine()}
           </div>
@@ -138,10 +153,7 @@ class CopyItem extends React.Component {
             onChange={this.handleNewKey}
           />
         </div>
-
-        <button className="copy-button" onClick={this.handleCopy}>
-          copy
-        </button>
+        <button className="remove-button" onClick={this.props.delete}></button>
       </div>
     );
   }
