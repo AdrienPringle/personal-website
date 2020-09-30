@@ -71,7 +71,7 @@ class CopyDoc extends React.Component {
             )}
             <div id="add-container">
               <button className="add-button" onClick={this.handleAddCopyItem}>
-                +
+                ┼
               </button>
               {!this.getActiveItems() && (
                 <div className="copy-helper">
@@ -110,7 +110,11 @@ class CopyItem extends React.Component {
           />
         );
       }
-      return <span key={index}>{t}</span>;
+      return (
+        <span className="val-const" key={index}>
+          {t}
+        </span>
+      );
     });
   }
 
@@ -148,7 +152,7 @@ class CopyItem extends React.Component {
     return (
       <div className="CopyItem">
         <button className="copy-button" onClick={this.handleCopy}>
-          copy
+          <span className="copy-symbol"> ⎘ </span>
         </button>
         <div className="command-container">
           <div className="line-container" ref={this.lineRef}>
@@ -198,7 +202,7 @@ class ResizeInput extends React.Component {
 
   render() {
     return (
-      <input
+      <textarea
         className="val-input"
         type="text"
         value={this.state.value}

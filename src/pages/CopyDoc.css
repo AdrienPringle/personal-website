@@ -20,7 +20,7 @@
   padding-left: 10px;
   margin: 5px;
   /* width: 1200px; */
-  width: calc(100% - 5px);
+  width: calc(100% - 6px);
 }
 .key-input:focus {
   background-color: #eee;
@@ -33,10 +33,18 @@
   font-family: "Cousine", monospace;
 }
 
+.val-input {
+  overflow-x: hidden;
+}
+
 .line-container {
   color: black;
   margin: 5px;
   margin-bottom: 0px;
+
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .item-container {
@@ -44,7 +52,7 @@
   flex-direction: column;
 
   width: 1200px;
-  max-width: 90vw;
+  max-width: calc(100vw - 40px);
 }
 
 .CopyItem {
@@ -65,6 +73,8 @@
 
 .command-container {
   flex-grow: 1;
+  flex-basis: 0;
+  max-width: calc(100% - 100px);
 }
 
 .line-container {
@@ -73,6 +83,8 @@
 
 .remove-button {
   align-self: flex-start;
+  margin: 5px;
+  margin-left: -5px;
 
   color: #aeaeae;
 
@@ -84,7 +96,7 @@
 
   display: inline-block;
   line-height: 0px;
-  padding: 11px 2.5px;
+  padding: 12px 2px 10px 1.5px;
 }
 .remove-button:before {
   content: "×";
@@ -97,23 +109,30 @@
 }
 
 .copy-button {
-  margin: 5px;
-  width: 62px;
-  height: 62px;
+  margin: 10px;
+  margin-right: 5px;
+  width: 64px;
+  height: 64px;
   display: inline-block;
 
+  font-size: 80px;
   /*  background-color: #b391fa; */
+}
+.copy-symbol {
+  display: block;
+  margin-top: -21px;
 }
 
 .add-button {
-  margin: 5px;
-  margin-top: 15px;
+  margin: 10px;
+  margin-top: 20px;
   font-size: 42px;
 
-  width: 62px;
-  height: 62px;
+  width: 64px;
+  height: 64px;
 
   display: inline-block;
+  font-family: sans-serif;
 }
 
 .val-input {
@@ -122,8 +141,17 @@
   padding-right: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  height: 28px;
 
   font-style: italic;
+
+  resize: none;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.val-const {
+  position: relative;
+  top: -3px;
 }
 
 .copy-helper {
