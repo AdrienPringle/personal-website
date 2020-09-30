@@ -125,9 +125,17 @@ class CopyItem extends React.Component {
   };
 
   handleNewKey = (event) => {
+    let newComp = event.target.value.split("|");
+    let oldComp = this.state.key.split("|");
+
+    //dont change component segment of unchanged key segments
+    newComp.forEach((c, index) => {
+      newComp[index] = c === oldComp[index] ? this.state.components[index] : c;
+    });
+
     this.setState({
       key: event.target.value,
-      components: this.state.key.split("|"),
+      components: newComp,
     });
   };
 
