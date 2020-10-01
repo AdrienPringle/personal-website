@@ -71,7 +71,7 @@ class CopyDoc extends React.Component {
             )}
             <div id="add-container">
               <button className="add-button" onClick={this.handleAddCopyItem}>
-                ┼
+                ＋
               </button>
               {!this.getActiveItems() && (
                 <div className="copy-helper">

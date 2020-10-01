@@ -10,6 +10,11 @@
   transition: all 0.2s;
 } */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+}
+
 .key-input {
   background-color: #aaa;
   color: #eee;
@@ -33,10 +38,6 @@
   font-family: "Cousine", monospace;
 }
 
-.val-input {
-  overflow-x: hidden;
-}
-
 .line-container {
   color: black;
   margin: 5px;
@@ -45,6 +46,10 @@
   white-space: nowrap;
   max-width: 100%;
   overflow-x: scroll;
+  overflow: overlay;
+}
+.line-container:not(:hover)::-webkit-scrollbar {
+  display: none;
 }
 
 .item-container {
@@ -115,12 +120,20 @@
   height: 64px;
   display: inline-block;
 
-  font-size: 80px;
+  font-size: 60px;
   /*  background-color: #b391fa; */
+
+  overflow: hidden;
+  position: relative;
 }
 .copy-symbol {
-  display: block;
-  margin-top: -21px;
+  position: absolute;
+  top: -100px;
+  bottom: -100px;
+  left: -100px;
+  right: -100px;
+  margin: auto;
+  line-height: 255px; /* lol no idea why this works */
 }
 
 .add-button {
@@ -148,7 +161,12 @@
   resize: none;
   display: inline-block;
   vertical-align: text-bottom;
+  overflow: hidden;
 }
+.val-input::-webkit-scrollbar {
+  display: none;
+}
+
 .val-const {
   position: relative;
   top: -3px;
