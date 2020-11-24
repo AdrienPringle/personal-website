@@ -24,7 +24,7 @@ class Resume extends Component {
     if (isCondensed) {
       for (let skill in skills) {
         skills[skill] = skills[skill].filter((i) => i.isImportant);
-        if (skills[skill].length == 0) delete skills[skill];
+        if (skills[skill].length === 0) delete skills[skill];
       }
     }
 

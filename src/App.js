@@ -35,7 +35,7 @@ class App extends Component {
   };
 
   handleExiting = (e) => {
-    if (e != undefined) {
+    if (e) {
       if (this.state.direction === "left") {
         e.classList.remove("right-exit-active");
         e.classList.remove("right-exit");
@@ -62,7 +62,7 @@ class App extends Component {
     }
 
     //set background
-    if (window.location.pathname != "/copydoc") {
+    if (window.location.pathname !== "/copydoc") {
       if (window.pageYOffset <= 0)
         this.setState({ backgroundColor: "#AE44BF" });
       if (window.pageYOffset >= document.body.offsetHeight)
@@ -140,7 +140,7 @@ class App extends Component {
               </TransitionGroup>
             )}
           />
-          {window.location.pathname == "/copydoc" ? (
+          {window.location.pathname === "/copydoc" ? (
             <div id="plain-backdrop" className="backdrop"></div>
           ) : (
             <React.Fragment>

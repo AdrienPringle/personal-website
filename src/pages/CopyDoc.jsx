@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./CopyDoc.css";
 
 class CopyDoc extends React.Component {
@@ -145,7 +145,7 @@ class CopyItem extends React.Component {
 
   handleCopy = () => {
     let copyData = this.state.components.join("");
-    let promise = navigator.clipboard.writeText(copyData);
+    navigator.clipboard.writeText(copyData);
   };
 
   render() {

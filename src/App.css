@@ -64,6 +64,9 @@ h4 {
   color: #ffde85;
   font-weight: normal;
 }
+a {
+  color: inherit;
+}
 
 /* ANIMATIONS */
 .left-enter {

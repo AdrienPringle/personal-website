@@ -5,7 +5,3 @@
 .popup-text:target {
   display: inline;
 }
-
-a {
-  color: inherit;
-}

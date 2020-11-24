@@ -68,7 +68,7 @@ class About extends Component {
             the University of Waterloo. I'm in the coop program so please hire
             me for the <b>spring 2021</b> academic term
           </p>
-          <img src={img1}></img>
+          <img src={img1} alt="ugly ass"></img>
           <h4>Origin Story</h4>
           <p>
             {" "}
