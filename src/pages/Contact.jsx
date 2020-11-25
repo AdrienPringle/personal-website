@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.css";
 
 //import components
@@ -9,7 +9,13 @@ import PageShade from "../components/PageShade";
 //import contact info
 import info from "./contactInfo.js";
 
-function Contact() {
+export default function Contact() {
+  const [clipboard, setClipboard] = useState("");
+
+  const copy = (text) => {
+    navigator.clipboard.writeText(text).then(() => setClipboard(text));
+  };
+
   const contactGroup = (title, items) => {
     return (
       <React.Fragment key={title}>
@@ -23,13 +29,28 @@ function Contact() {
     );
   };
   const contactItem = ({ value, icon, active, isColored, isLink }) => {
-    return (
-      <div className="contact-item" key={value}>
+    const isCopied = clipboard === value;
+    const className = "contact-item " + (active ? "" : "inactive");
+    const contents = (
+      <>
         {React.createElement(icon, {
           className: "contact-icon",
           ...(!isColored && { fill: "#f2d8f1" }),
+          ...(!active && { filter: "grayscale(100%)" }),
         })}
-        <span className="contact-info">{value}</span>
+        <span>{value}</span>
+      </>
+    );
+    return isLink ? (
+      <a className={className} key={value} href={"https://" + value}>
+        {contents}
+      </a>
+    ) : (
+      <div className={className} key={value} onClick={() => copy(value)}>
+        {contents}
+        <Popup isCopied={isCopied}>
+          {isCopied ? "copied!" : active ? "copy" : "inactive"}
+        </Popup>
       </div>
     );
   };
@@ -45,4 +66,10 @@ function Contact() {
   );
 }
 
-export default Contact;
+function Popup({ isCopied, children }) {
+  return (
+    <div className={`popup-positioner ${isCopied ? "anim" : ""}`}>
+      <div className="contact-popup">{children}</div>{" "}
+    </div>
+  );
+}

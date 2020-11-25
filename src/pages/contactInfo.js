@@ -42,14 +42,14 @@ export default {
     ],
     "Other" : [
         {
-            "value": "facebook.com/AdrienPringleFB",
+            "value": "m.me/AdrienPringleFB",
             "icon": Facebook,
             "active": true,
             "isColored": false,
             "isLink": true
         },
         {
-            "value": "linkedin.com/AdrienPringle",
+            "value": "linkedin.com/in/AdrienPringle",
             "icon": LinkedIn,
             "active": true,
             "isColored": false,
