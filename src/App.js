@@ -26,6 +26,19 @@ class App extends Component {
     };
   }
 
+  componentDidMount = () => {
+    switch (window.location.pathname.toLowerCase()){
+    case "/resume": 
+      this.setState({tab: 1})
+      break
+    case "/contact": 
+      this.setState({tab: 2})
+      break
+    default: 
+      this.setState({tab: 0})
+    }
+  }
+
   handleClick = (tab) => {
     if (this.state.tab > tab) {
       this.setState({ direction: "right", tab: tab });
