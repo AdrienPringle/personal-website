@@ -1,4 +1,3 @@
-This is the repo for my personal website. It's not completely done yet and I haven't bought a domain yet so for now it can be found (in an unfinished state) at https://personal-website-15cf0.web.app/#/
+This is the repo for my personal website. You can find it at [apringle.dev](https://apringle.dev) It's not completely done yet so be patient. Please don't hesitate to report any problems.
 
-
-It's built using react and hosted using firebase.
+Its built using react and hosted using firebase.
