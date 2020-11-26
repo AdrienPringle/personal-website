@@ -50,7 +50,7 @@ class Navbar extends Component {
           <div>Contact</div>
         </NavLink>
         <a
-          href="https://github.com/AdrienPringle"
+          href="https://github.com/AdrienPringle/personal-website"
           rel="noopener"
           className="imgContainer"
         >

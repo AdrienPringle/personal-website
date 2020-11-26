@@ -30,6 +30,15 @@
   line-height: 2rem;
 }
 
+.sub-development {
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: -1.4rem;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
 #downButton {
   margin: auto;
   width: 5rem;

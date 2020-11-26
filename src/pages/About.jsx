@@ -36,7 +36,12 @@ class About extends Component {
         <PageShade isScroll={true} />
         <div id="frontPage" onClick={this.handleFrontPageClick}>
           <div id="introduction">
-            Hi i'm <h1>Adrien Pringle</h1>
+            Hi i'm
+            <h1>Adrien Pringle</h1>
+            <div class="sub-development">
+              and I'm still working hard on this site, so please don't hesisate
+              to <a href="/contact">contact me</a> if something breaks
+            </div>
           </div>
           <img id="downButton" alt="go down" src={downButton}></img>
         </div>
