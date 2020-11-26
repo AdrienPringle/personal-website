@@ -20,7 +20,7 @@ export default function Contact() {
     return (
       <React.Fragment key={title}>
         <div className="contact-section-header">{title}</div>
-        <div id="contactQuick" className="contact-section">
+        <div className="contact-section">
           <div className="contact-section-content">
             {items.map((i) => contactItem(i))}
           </div>
@@ -36,7 +36,7 @@ export default function Contact() {
         {React.createElement(icon, {
           className: "contact-icon",
           ...(!isColored && { fill: "#f2d8f1" }),
-          ...(!active && { filter: "grayscale(100%)" }),
+          // ...(!active && { filter: "grayscale(100%)" }),
         })}
         <span>{value}</span>
       </>

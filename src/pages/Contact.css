@@ -5,9 +5,9 @@
 }
 
 .contact-icon {
-  height: 2rem;
-  width: 2rem;
-  margin-right: 0.5rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-right: 1rem;
   margin-left: 0;
 }
 
@@ -22,13 +22,17 @@
 }
 
 .inactive {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 #contact-info {
   display: grid;
   grid-template-columns: auto auto;
-  margin-top: 5rem;
+  margin-top: 15vh;
+  /* padding: 5rem; */
+  padding-bottom: 3rem;
+
+  /* background-color: rgba(55, 47, 83, 0.5); */
 }
 
 .contact-section-header {
@@ -37,12 +41,12 @@
 
   font-style: normal;
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 2.5rem;
 
   margin-right: 2rem;
-  line-height: 2rem;
-
+  margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  line-height: 2rem;
 }
 
 .contact-section {
@@ -50,11 +54,22 @@
 
   font-style: normal;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 
   margin-bottom: 2rem;
-
   line-height: 2rem;
+}
+
+@media (max-width: 900px) {
+  .contact-section-header {
+    text-align: left;
+  }
+  .contact-section {
+    grid-column: 1;
+  }
+  #contact-info {
+    grid-template-columns: auto;
+  }
 }
 
 .contact-popup {
