@@ -37,6 +37,12 @@ class App extends Component {
     default: 
       this.setState({tab: 0})
     }
+
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleClick = (tab) => {
@@ -75,12 +81,11 @@ class App extends Component {
     }
 
     //set background
-    if (window.location.pathname !== "/copydoc") {
-      if (window.pageYOffset <= 0)
-        this.setState({ backgroundColor: "#AE44BF" });
-      if (window.pageYOffset >= document.body.offsetHeight)
-        this.setState({ backgroundColor: "#872a9d" });
-    }
+    if (window.pageYOffset <= 0)
+      this.setState({ backgroundColor: "#AE44BF" });
+    if (window.pageYOffset >= document.body.offsetHeight - window.innerHeight)
+      this.setState({ backgroundColor: "#872a9d" });
+  
     let html = document.getElementById("html");
     if (html.style.backgroundColor !== this.state.backgroundColor) {
       html.style.backgroundColor = this.state.backgroundColor;
@@ -90,14 +95,6 @@ class App extends Component {
   setFrontPageIsVisible = (isVisible) => {
     this.setState({ frontPageIsVisible: isVisible });
   };
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
 
   render() {
     return (

@@ -74,7 +74,7 @@ class Resume extends Component {
           </div>
           <div id="resumeOptions">
             <Switch
-              text="Show Condensed"
+              text={this.state.isCondensed ? "Show Expanded" : "Show Condensed"}
               handleClick={this.handleSwitchOnClick}
             />
             <a
