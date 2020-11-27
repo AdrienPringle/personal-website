@@ -38,9 +38,12 @@ class About extends Component {
           <div id="introduction">
             Hi i'm
             <h1>Adrien Pringle</h1>
-            <div class="sub-development">
-              and I'm still working hard on this site, so please don't hesisate
-              to <a href="/contact">contact me</a> if something breaks
+            <div className="sub-development">
+              and I'm still working hard on this site, so please{" "}
+              <a href="https://github.com/AdrienPringle/personal-website/issues">
+                create an issue
+              </a>{" "}
+              when something inevitably breaks
             </div>
           </div>
           <img id="downButton" alt="go down" src={downButton}></img>

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
 
+import firebase from 'firebase/app';
+import 'firebase/analytics';
+
 //import react router and transition
 import { Route, Redirect, BrowserRouter, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -15,6 +18,18 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import CopyDoc from "./pages/CopyDoc";
 
+if (!firebase.apps.length) firebase.initializeApp({
+  apiKey: "AIzaSyDScSTrNdLC-KuKAQRgfBGkOS4ggGWfAUc",
+  authDomain: "personal-website-15cf0.firebaseapp.com",
+  databaseURL: "https://personal-website-15cf0.firebaseio.com",
+  projectId: "personal-website-15cf0",
+  storageBucket: "personal-website-15cf0.appspot.com",
+  messagingSenderId: "1003425867373",
+  appId: "1:1003425867373:web:000c3fed254549749f0164",
+  measurementId: "G-NGC298EM6C"
+})
+
+
 class App extends Component {
   constructor() {
     super();
@@ -24,6 +39,7 @@ class App extends Component {
       direction: "left",
       frontPageIsVisible: false,
     };
+    firebase.analytics()
   }
 
   componentDidMount = () => {
