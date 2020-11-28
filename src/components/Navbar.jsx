@@ -13,10 +13,9 @@ import "./Navbar.css";
 class Navbar extends Component {
   anal = firebase.analytics();
 
-  nameShouldDisplay() {
-    if (this.props.frontPageIsVisible) return { display: "none" };
-    return {};
-  }
+  nameVisibleClass = () =>
+    this.props.frontPageIsVisible ? "name-invisible" : "name-visible";
+
   render() {
     return (
       <div id="Navbar">
@@ -27,13 +26,13 @@ class Navbar extends Component {
             this.anal.logEvent("page_view", { page_title: "Home" });
             this.props.handleClick(0);
           }}
-          style={this.nameShouldDisplay()}
+          className={this.nameVisibleClass()}
         >
           <span>
             Hi I'm
             <b className="navbar-name"> Adrien Pringle </b>{" "}
           </span>
-          <UpButton className="UpButton" />
+          {/* <UpButton className="UpButton" /> */}
         </NavLink>
         <NavLink
           to="/About"

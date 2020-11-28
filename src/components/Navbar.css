@@ -73,6 +73,15 @@
   display: flex;
   align-items: center;
 }
+.name-invisible {
+  opacity: 0%;
+  transform: translate(0, 60px);
+  transition: all ease-in-out 0.1s;
+}
+.name-visible {
+  /* opacity: 100%; */
+  transition: all ease-out 0.2s;
+}
 
 .navbar-name {
   font-size: 2rem;
