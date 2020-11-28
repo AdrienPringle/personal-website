@@ -17,6 +17,7 @@ body {
 
 .Content {
   max-width: 80%;
+  min-height: calc(100vh - 5rem);
 }
 
 html {
