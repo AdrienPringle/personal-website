@@ -52,13 +52,6 @@ class About extends Component {
           <img id="downButton" alt="go down" src={downButton}></img>
         </div>
         <div id="text">
-          <p>
-            {" "}
-            <b>
-              All of this is tentative pls dont hate me too hard yet thank u
-              very much xoxo
-            </b>
-          </p>
           <h4>About Me</h4>
           <p>
             {" "}
@@ -68,18 +61,13 @@ class About extends Component {
             trash cans). I'm, currently in a web design phase which is why you
             made it to this website.
           </p>
-          <p>
-            {" "}
-            Aside from electronics, I like running, BMX, math, and power tools.
-            I'll be very happy if you put me in front of a milling machine.
-          </p>
+          <img id="me-image" src={img1} alt="ugly ass" />
           <p>
             {" "}
             I'm currently working towards my B.Eng in computer engineering at
             the University of Waterloo. I'm in the coop program so please hire
-            me for the <b>spring 2021</b> academic term
+            me for the <b>spring 2021</b> academic term.
           </p>
-          <img id="me-image" src={img1} alt="ugly ass"></img>
           {/* <div id="projects-grid">
             {projects.map(({ title, content, url, src }, i) => (
               <ImageTile
