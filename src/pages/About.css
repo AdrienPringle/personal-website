@@ -44,9 +44,14 @@
   width: 5rem;
 }
 
-img {
+#me-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 10rem;
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: auto auto;
 }

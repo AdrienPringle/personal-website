@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./About.css";
 
+import projects from "./projects.js";
+
 //import components
 import downButton from "./down-button.svg";
 import PageShade from "../components/PageShade";
+import ImageTile from "../components/ImageTile";
 
 //import images
 import img1 from "./me.png";
@@ -76,23 +79,27 @@ class About extends Component {
             the University of Waterloo. I'm in the coop program so please hire
             me for the <b>spring 2021</b> academic term
           </p>
-          <img src={img1} alt="ugly ass"></img>
-          <h4>Origin Story</h4>
-          <p>
-            {" "}
-            I used to like playing games. Then I was introduced to scratch in
-            grade 5, which allowed me to make any game I wanted. I designed
-            games in Scratch religiously for years, which gradually turned into
-            seperate interests in math, programming, ui design, and game design
-          </p>
-          <a href="http://"> view my embarassing grade 5 scratch games </a>
-          <h4> Come play games with me</h4>
-          <a href="http://">Discord</a> <a href="http://">Steam</a>{" "}
-          <a href="http://">Epic</a> <a href="http://">Battlenet</a>{" "}
-          <a href="http://">Riot</a>
-          <div style={{ height: "100rem" }}></div>
-          <p>I'm also a closet weeb. shh...</p>
-          <a href="http://">MAL</a>
+          <img id="me-image" src={img1} alt="ugly ass"></img>
+          {/* <div id="projects-grid">
+            {projects.map(({ title, content, url, src }, i) => (
+              <ImageTile
+                title={title}
+                imgSrc={src}
+                key={i}
+                style={{ gridColumn: i % 2 }}
+              >
+                {content}
+              </ImageTile>
+            ))}
+          </div> */}
+          <br />
+          <h2>Side Projects</h2> <br />
+          {projects.map(({ title, content, url, src }, i) => (
+            <ImageTile title={title} imgSrc={src} key={i} url={url}>
+              {content}
+            </ImageTile>
+          ))}
+          <div style={{ height: "25vh" }}></div>
         </div>
       </div>
     );
