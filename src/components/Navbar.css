@@ -5,8 +5,9 @@
   top: 0;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 
   padding-top: 0.4rem;
   padding-left: 1rem;
@@ -15,6 +16,15 @@
 
 #Navbar > * {
   padding-bottom: 0;
+}
+
+#tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#tabs .NavText:first-child {
+  padding-left: 0;
 }
 
 .NavText {
@@ -72,6 +82,8 @@
 
   display: flex;
   align-items: center;
+
+  min-width: 275px;
 }
 .name-invisible {
   opacity: 0%;
