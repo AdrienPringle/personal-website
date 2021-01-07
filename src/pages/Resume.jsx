@@ -83,7 +83,7 @@ class Resume extends Component {
 							handleClick={this.handleSwitchOnClick}
 						/>
 						<a
-							href="/Adrien_Pringle_Resume_2020.pdf"
+							href="/Pringle_Adrien_Resume_21.pdf"
 							target="_blank"
 							id="openPDFButton"
 						>
