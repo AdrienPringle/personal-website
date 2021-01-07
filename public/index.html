@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" id="html">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#872A9D" />
-    <meta name="description" content="Welcome to my website!" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/logo.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#872A9D" />
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -27,10 +26,44 @@
       Learn how to configure a non-root public URL by running `npm run build`.
 
     -->
-    <title>Adrien Pringle</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+		<title>Adrien Pringle</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"email": ["mailto:adrienpringle@gmail.com"],
+				"name": "Adrien Pringle",
+				"givenName": "Adrien",
+				"familyName": "Pringle",
+				"telephone": "+1 519 590 4549",
+				"url": ["http://apringle.dev", "https://github.com/AdrienPringle"],
+				"alumniOf": {
+					"@type": "Organization",
+					"name": ["University of Waterloo", "UWaterloo"],
+					"@id": "https://uwaterloo.ca/"
+				},
+				"image": "https://github.com/AdrienPringle.png",
+				"jobTitle": [
+					"computer engineering student",
+					"CE student",
+					"ECE student"
+				]
+			}
+		</script>
+		<meta
+			property="og:image"
+			content="https://avatars0.githubusercontent.com/u/30927609?s=400&amp;u=fab1151adc71c5449a54a67f019a71069ce84892&amp;v=4"
+		/>
+		<meta property="og:type" content="profile" />
+		<meta property="og:title" content="Adrien Pringle" />
+		<meta property="og:url" content="https://apringle.dev" />
+		<meta
+			property="og:description"
+			content="Software Dev | Computer Engineering @ UWaterloo | cargo short connoisseur"
+		/>
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root"></div>
+	</body>
 </html>
