@@ -5,6 +5,7 @@ import tilegameIcon from "./project-icons/tilegame.png";
 import gravityIcon from "./project-icons/gravity.png";
 import threedIcon from "./project-icons/3d.png";
 import guitarIcon from "./project-icons/guitar.png";
+import streaminarIcon from "./project-icons/streaminar.png";
 import soundboardIcon from "./project-icons/soundboard.png";
 
 const projects = [
@@ -12,6 +13,13 @@ const projects = [
 		title: "Soundboard Bot",
 		content: "A voice activated Discord bot - ⚠️still in progress⚠️",
 		src: soundboardIcon,
+	},
+	{
+		title: "Streaminar",
+		content:
+			"A chrome extension to create notes that are syncronized with videos",
+		url: "https://devpost.com/software/time-sensitive-video-notes",
+		src: streaminarIcon,
 	},
 	{
 		title: "Bison Blog Notifications",
