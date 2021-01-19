@@ -77,18 +77,6 @@ class About extends Component {
 						University of Waterloo. I'm in the coop program so please hire me
 						for the <b>spring 2021</b> academic term.
 					</p>
-					{/* <div id="projects-grid">
-            {projects.map(({ title, content, url, src }, i) => (
-              <ImageTile
-                title={title}
-                imgSrc={src}
-                key={i}
-                style={{ gridColumn: i % 2 }}
-              >
-                {content}
-              </ImageTile>
-            ))}
-          </div> */}
 					<br />
 					<h2>Side Projects</h2> <br />
 					{projects.map(({ title, content, url, src }, i) => (
