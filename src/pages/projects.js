@@ -7,12 +7,14 @@ import threedIcon from "./project-icons/3d.png";
 import guitarIcon from "./project-icons/guitar.png";
 import streaminarIcon from "./project-icons/streaminar.png";
 import soundboardIcon from "./project-icons/soundboard.png";
+import ytNavIcon from "./project-icons/ytnav.jpg";
 
 const projects = [
 	{
-		title: "Soundboard Bot",
-		content: "A voice activated Discord bot - ⚠️still in progress⚠️",
-		src: soundboardIcon,
+		title: "Low Effort Youtube Navigation",
+		content: "I spent 3 days of my life working on a 5 second annoyance",
+		src: ytNavIcon,
+		url: "/projects/ytnav.html",
 	},
 	{
 		title: "Streaminar",
