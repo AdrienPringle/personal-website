@@ -8,8 +8,15 @@ import guitarIcon from "./project-icons/guitar.png";
 import streaminarIcon from "./project-icons/streaminar.png";
 import soundboardIcon from "./project-icons/soundboard.png";
 import ytNavIcon from "./project-icons/ytnav.jpg";
+import recursion from "./project-icons/recursion.jpg";
 
 const projects = [
+	{
+		title: "Recursive Reactions",
+		content: "Do you ever wish you could react to reactions?",
+		src: recursion,
+		url: "https://recursive.apringle.dev",
+	},
 	{
 		title: "Low Effort Youtube Navigation",
 		content: "I spent 3 days of my life working on a 5 second annoyance",
