@@ -9,8 +9,15 @@ import streaminarIcon from "./project-icons/streaminar.png";
 import soundboardIcon from "./project-icons/soundboard.png";
 import ytNavIcon from "./project-icons/ytnav.jpg";
 import recursion from "./project-icons/recursion.jpg";
+import everyBorder from "./project-icons/every-border.png";
 
 const projects = [
+	{
+		title: "Country Border Distance Visualiser",
+		content: "Find the distance from other countries by border crossing count",
+		src: everyBorder,
+		url: "https://every-border.web.app",
+	},
 	{
 		title: "Recursive Reactions",
 		content: "Do you ever wish you could react to reactions?",
